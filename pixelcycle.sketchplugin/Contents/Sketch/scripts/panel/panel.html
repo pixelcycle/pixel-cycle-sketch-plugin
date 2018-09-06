@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript">
+
+    function bindEvent(element, eventName, eventHandler) {
+      if (element.addEventListener) {
+        element.addEventListener(eventName, eventHandler, false);
+      } else if (element.attachEvent) {
+        element.attachEvent('on' + eventName, eventHandler);
+      }
+    }
+
+    bindEvent(window, 'message', function (e) {
+      const action = e.data && e.data.action
+
+      if(action === 'loaded') {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("iframe").style.display = "block";
+      }
+
+      if(action === 'insert_image') {
+        SketchAction('insertImage', e.data.data)
+      }
+
+      if(action === 'set_setting') {
+        SketchAction('setSetting', e.data.data)
+      }
+
+      if(action === 'get_setting') {
+        SketchAction('getSetting', e.data.data)
+      }
+
+    });
+
+    function passData(action, data) {
+      var iframeEl = document.getElementById('iframe')
+      iframeEl.contentWindow.postMessage({
+        action,
+        data
+      }, '*');
+    }
+
+  </script>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    #iframe {
+      border: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .wrapper {
+      height: 600px;
+    }
+    #loading {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      padding-top: 200px;
+      font-size: 20px;
+      color: #cccccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div id="loading">Loading Images...</div>
+    <iframe id="iframe" src="https://www.pixelcycle.ai/sketch_plugin/0.2.0"></iframe>
+  </div>
+
+</body>
+</html>

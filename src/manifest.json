@@ -1,0 +1,18 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "Add Image",
+      "identifier": "pixel-cycle-pattern-fill",
+      "script": "./pattern-fill.js"
+    }
+  ],
+  "menu": {
+    "title": "PixelCycle",
+    "items": [
+      "pixel-cycle-pattern-fill"
+    ]
+  }
+}

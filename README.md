@@ -1,1 +1,2 @@
-# pixel-cycle-sketch-plugin
+# PixelCycle Sketch Plugin
+

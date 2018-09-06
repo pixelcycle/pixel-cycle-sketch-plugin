@@ -1,0 +1,25 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "Add Image",
+      "identifier": "pixel-cycle-pattern-fill",
+      "script": "pattern-fill.js"
+    }
+  ],
+  "menu": {
+    "title": "PixelCycle",
+    "items": [
+      "pixel-cycle-pattern-fill"
+    ]
+  },
+  "version": "0.2.0",
+  "name": "PixelCycle",
+  "identifier": "PixelCycle",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml",
+  "author": "Chris Achard",
+  "authorEmail": "chris@pixelcycle.ai"
+}
