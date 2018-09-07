@@ -48,6 +48,7 @@ And then choose and insert an image into your Sketch file
 
 
 <br />
+
 ## Feedback and Troubleshooting
 
 I'm very interested to see what you create with the plugin!
