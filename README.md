@@ -1,10 +1,10 @@
-# PixelCycle.ai Sketch Plugin
+# PixelCycle Sketch Plugin
 
 <br />
 
 ## Generate Images
 
-PixelCycle.ai lets you generate several types of **vector patterns** and backgrounds, and add them to your Sketch project.
+[PixelCycle.ai](https://www.pixelcycle.ai/) lets you generate several types of **vector patterns** and backgrounds, and add them to your Sketch project.
 
 <br />
 
