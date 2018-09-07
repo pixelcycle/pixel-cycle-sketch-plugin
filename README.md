@@ -57,7 +57,7 @@ Before you download each image, you have the ability to edit the image.  Each im
 
 <br />
 
-<img src="https://github.com/pixelcycle/pixel-cycle-sketch-plugin/raw/master/screenshots/adjustments.png" alt="PixelCycle image adjustments" />
+<img src="https://github.com/pixelcycle/pixel-cycle-sketch-plugin/raw/master/screenshots/adjustments.png" alt="PixelCycle image adjustments" width="300px" />
 
 <br />
 
