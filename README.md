@@ -47,6 +47,21 @@ And then choose and insert an image into your Sketch file
 <br />
 
 
+
+<br />
+
+## Adjusting the Images
+
+Before you download each image, you have the ability to edit the image.  Each image type has different settings that you can adjust to make the image fit your needs.
+
+
+<br />
+
+<img src="https://github.com/pixelcycle/pixel-cycle-sketch-plugin/raw/master/screenshots/adjustments.png" alt="PixelCycle image adjustments" />
+
+<br />
+
+
 <br />
 
 ## Feedback and Troubleshooting
