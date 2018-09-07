@@ -1,11 +1,13 @@
 # PixelCycle Sketch Plugin
 
 <br />
+
 ## Generate Images
 
 Pixel Cycle lets you generate several types of **vector patterns** and backgrounds, and add them to your Sketch project.
 
 <br />
+
 ## Installation
 
 First, download the PixelCycle Sketch Plugin as a zip file from here:
@@ -16,25 +18,32 @@ First, download the PixelCycle Sketch Plugin as a zip file from here:
 Then, **unzip** that file, and **double click** on the `pixel-cycle.sketchplugin` file to install.
 
 <br />
+
 ## Using the Plugin
 
 Once installed, open the plugin in Sketch by going to `Plugins` > `PixelCycle` > `Add Image`
 
 <br />
-<img src="https://github.com/pixelcycle/pixel-cycle-sketch-plugin/raw/master/screenshots/menu.png" alt="PixelCycle Menu" style="width:500px;"/>
+
+<img src="https://github.com/pixelcycle/pixel-cycle-sketch-plugin/raw/master/screenshots/menu.png" alt="PixelCycle Menu" width="500px" />
+
 <br />
 
 Then you can browse the image categories:
 
 <br />
-<img src="https://github.com/pixelcycle/pixel-cycle-sketch-plugin/raw/master/screenshots/categories.png" alt="PixelCycle Menu" style="width:300px;"/>
+
+<img src="https://github.com/pixelcycle/pixel-cycle-sketch-plugin/raw/master/screenshots/categories.png" alt="PixelCycle categories" width="300px" />
+
 <br />
 
 And then choose and insert an image into your Sketch file
 
 
 <br />
-<img src="https://github.com/pixelcycle/pixel-cycle-sketch-plugin/raw/master/screenshots/choosing.png" alt="PixelCycle Menu" />
+
+<img src="https://github.com/pixelcycle/pixel-cycle-sketch-plugin/raw/master/screenshots/choosing.png" alt="PixelCycle insert image" />
+
 <br />
 
 
