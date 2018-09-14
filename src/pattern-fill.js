@@ -98,7 +98,7 @@ const MochaJSDelegate = function(selectorHandlerDict){
   const width = 400
   const height = 600
 
-  const floatWindow = true
+  const floatWindow = false
 
   const frame = NSMakeRect(0, 0, width, (height + 32))
   // const titleBgColor = NSColor.colorWithRed_green_blue_alpha(0 / 255, 145 / 255, 234 / 255, 1)
@@ -107,18 +107,18 @@ const MochaJSDelegate = function(selectorHandlerDict){
   const contentBgColor = NSColor.colorWithRed_green_blue_alpha(1, 1, 1, 1)
 
 
-  const identifier = 'pixel-cycle-pattern-fill-panel'
-  const threadDictionary = NSThread.mainThread().threadDictionary();
-  if(threadDictionary[identifier]) {
-    // Window alrady open
+  // const identifier = 'pixel-cycle-pattern-fill-panel'
+  // const threadDictionary = NSThread.mainThread().threadDictionary();
+  // if(threadDictionary[identifier]) {
+  //   // Window alrady open
 
-    // Development only:
-    // threadDictionary[identifier].close();
-    // threadDictionary.removeObjectForKey(identifier)
+  //   // Development only:
+  //   // threadDictionary[identifier].close();
+  //   // threadDictionary.removeObjectForKey(identifier)
 
-    // Production only:
-    return false
-  }
+  //   // Production only:
+  //   return false
+  // }
 
   const hiddenClose = false;
 
@@ -143,12 +143,10 @@ const MochaJSDelegate = function(selectorHandlerDict){
   if(floatWindow) {
     Panel.becomeKeyWindow();
     Panel.setLevel(NSFloatingWindowLevel);
-    threadDictionary[identifier] = Panel;
+    // threadDictionary[identifier] = Panel;
     // Long-running script
     COScript.currentCOScript().setShouldKeepAround_(true);
   }
-
-
 
   const contentView = Panel.contentView()
   let webView = WebView.alloc().initWithFrame(NSMakeRect(0, 0, width, height));
@@ -293,7 +291,7 @@ const MochaJSDelegate = function(selectorHandlerDict){
 
   const closeButton = Panel.standardWindowButton(NSWindowCloseButton);
   closeButton.setCOSJSTargetFunction(function (sender) {
-    threadDictionary.removeObjectForKey(identifier)
+    // threadDictionary.removeObjectForKey(identifier)
     if(floatWindow) {
       COScript.currentCOScript().setShouldKeepAround_(false);
       Panel.close();

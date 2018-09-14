@@ -183,23 +183,21 @@ var SketchAPI = __webpack_require__(/*! sketch */ "sketch");
   var url = encodeURI("file://" + htmlPath);
   var width = 400;
   var height = 600;
-  var floatWindow = true;
+  var floatWindow = false;
   var frame = NSMakeRect(0, 0, width, height + 32); // const titleBgColor = NSColor.colorWithRed_green_blue_alpha(0 / 255, 145 / 255, 234 / 255, 1)
 
   var titleBgColor = NSColor.colorWithRed_green_blue_alpha(0 / 255, 102 / 255, 204 / 255, 1); // const titleBgColor = NSColor.colorWithRed_green_blue_alpha(1, 1, 1, 1)
 
-  var contentBgColor = NSColor.colorWithRed_green_blue_alpha(1, 1, 1, 1);
-  var identifier = 'pixel-cycle-pattern-fill-panel';
-  var threadDictionary = NSThread.mainThread().threadDictionary();
-
-  if (threadDictionary[identifier]) {
-    // Window alrady open
-    // Development only:
-    // threadDictionary[identifier].close();
-    // threadDictionary.removeObjectForKey(identifier)
-    // Production only:
-    return false;
-  }
+  var contentBgColor = NSColor.colorWithRed_green_blue_alpha(1, 1, 1, 1); // const identifier = 'pixel-cycle-pattern-fill-panel'
+  // const threadDictionary = NSThread.mainThread().threadDictionary();
+  // if(threadDictionary[identifier]) {
+  //   // Window alrady open
+  //   // Development only:
+  //   // threadDictionary[identifier].close();
+  //   // threadDictionary.removeObjectForKey(identifier)
+  //   // Production only:
+  //   return false
+  // }
 
   var hiddenClose = false; // let Panel = null
   // if(threadDictionary[identifier]) {
@@ -220,8 +218,8 @@ var SketchAPI = __webpack_require__(/*! sketch */ "sketch");
 
   if (floatWindow) {
     Panel.becomeKeyWindow();
-    Panel.setLevel(NSFloatingWindowLevel);
-    threadDictionary[identifier] = Panel; // Long-running script
+    Panel.setLevel(NSFloatingWindowLevel); // threadDictionary[identifier] = Panel;
+    // Long-running script
 
     COScript.currentCOScript().setShouldKeepAround_(true);
   }
@@ -335,8 +333,7 @@ var SketchAPI = __webpack_require__(/*! sketch */ "sketch");
   webView.setFrameLoadDelegate_(delegate.getClassInstance());
   var closeButton = Panel.standardWindowButton(NSWindowCloseButton);
   closeButton.setCOSJSTargetFunction(function (sender) {
-    threadDictionary.removeObjectForKey(identifier);
-
+    // threadDictionary.removeObjectForKey(identifier)
     if (floatWindow) {
       COScript.currentCOScript().setShouldKeepAround_(false);
       Panel.close(); // Develop mode? kill the script
